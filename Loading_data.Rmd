@@ -1,0 +1,54 @@
+---
+title: "Loading data"
+author: "Cameron Salter"
+date: "16/01/2023"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Exploring directories
+```{r}
+getwd()
+cat("\n")
+
+dir() # List files in directory. Equivalently: list.files()
+```
+
+```{r}
+# Setting a dir
+setwd("Test") # both relative and abs. paths work
+getwd()
+```
+
+```{r setup, include=FALSE}
+# Setting directory in Rmarkdown
+knitr::opts_knit$set(root.dir = paste0(getwd(),'/Data'))
+```
+
+
+```{r}
+setwd("..") # Move up dir. tree
+getwd()
+```
+
+# Loading in data
+https://readr.tidyverse.org/#cheatsheet
+```{r}
+library(readr) # readr - load in tabulated data
+library(readxl) # readxl - load in xlsx files 
+```
+
+```{r}
+data_csv <- readr::read_csv('dummy_data_csv.csv') # also read_tsv(), read_delim(), ...
+data_csv
+```
+
+```{r}
+data_excel <- readxl::read_excel('dummy_data_excel.xlsx') 
+data_excel
+```
+
