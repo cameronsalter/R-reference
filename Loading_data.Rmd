@@ -7,6 +7,9 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+# Setting directory in Rmarkdown
+#knitr::opts_knit$set(root.dir = paste0(getwd(),'/Data')) 
 ```
 
 
@@ -24,12 +27,6 @@ setwd("Test") # both relative and abs. paths work
 getwd()
 ```
 
-```{r setup, include=FALSE}
-# Setting directory in Rmarkdown
-knitr::opts_knit$set(root.dir = paste0(getwd(),'/Data'))
-```
-
-
 ```{r}
 setwd("..") # Move up dir. tree
 getwd()
@@ -43,12 +40,12 @@ library(readxl) # readxl - load in xlsx files
 ```
 
 ```{r}
-data_csv <- readr::read_csv('dummy_data_csv.csv') # also read_tsv(), read_delim(), ...
+data_csv <- readr::read_csv('Data/dummy_data_csv.csv') # also read_tsv(), read_delim(), ...
 data_csv
 ```
 
 ```{r}
-data_excel <- readxl::read_excel('dummy_data_excel.xlsx') 
+data_excel <- readxl::read_excel('Data/dummy_data_excel.xlsx') 
 data_excel
 ```
 
