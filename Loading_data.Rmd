@@ -2,7 +2,7 @@
 title: "Loading data"
 author: "Cameron Salter"
 date: "16/01/2023"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
