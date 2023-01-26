@@ -16,13 +16,12 @@ knitr::opts_chunk$set(echo = TRUE)
 # Exploring directories
 ```{r}
 getwd()
-cat("\n")
 
 dir() # List files in directory. Equivalently: list.files()
 ```
 
 ```{r}
-# Setting a dir
+# Setting a directory
 setwd("Test") # both relative and abs. paths work
 getwd()
 ```
