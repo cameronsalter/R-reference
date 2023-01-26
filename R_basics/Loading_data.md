@@ -9,33 +9,28 @@ Cameron Salter
 getwd()
 ```
 
-    ## [1] "D:/MY FILES/Projects/Public/R-reference"
-
-``` r
-cat("\n")
-```
+    ## [1] "D:/MY FILES/Projects/Public/R-reference/R_basics"
 
 ``` r
 dir() # List files in directory. Equivalently: list.files()
 ```
 
-    ## [1] "Data"              "docs"              "Loading_data.html"
-    ## [4] "Loading_data.Rmd"  "README.md"         "Test"
+    ## [1] "Data"             "Loading_data.md"  "Loading_data.Rmd" "Test"
 
 ``` r
-# Setting a dir
+# Setting a directory
 setwd("Test") # both relative and abs. paths work
 getwd()
 ```
 
-    ## [1] "D:/MY FILES/Projects/Public/R-reference/Test"
+    ## [1] "D:/MY FILES/Projects/Public/R-reference/R_basics/Test"
 
 ``` r
 setwd("..") # Move up dir. tree
 getwd()
 ```
 
-    ## [1] "D:/MY FILES/Projects/Public"
+    ## [1] "D:/MY FILES/Projects/Public/R-reference"
 
 # Loading in data
 
